@@ -1,82 +1,53 @@
-
 import React from "react";
 import "./styles.css";
 
 export default function App() {
   return (
-    <div className="container">
-      <header className="header">
-        <h1>Karma Kartel</h1>
-        <h2>The Code for Living</h2>
-        <p>
-          Cut through life’s chaos — one principle at a time. Build strength,
-          resilience, and peace through powerful tools for body and mind.
-        </p>
+    <div className="app">
+      <header className="hero">
+        <div className="glow-overlay"></div>
+        <div className="content">
+          <h1 className="title">Karma Kartel</h1>
+          <p className="tagline">The Truth Lives Here</p>
+          <p className="subtext">
+            Live your code. Transform your life. <br />
+            The Karma Code is your framework for strength, clarity, and inner peace.
+          </p>
+          <div className="buttons">
+            <a
+              href="https://thekarmacode-48.lovable.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta"
+            >
+              The Karma Code
+            </a>
+            <a
+              href="https://mobilityafter40.lovable.app/presales"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta secondary"
+            >
+              Mobility After 40
+            </a>
+          </div>
+        </div>
       </header>
 
-      <section className="products">
-        <div className="product-card">
-          <h3>The Karma Code</h3>
-          <p>
-            7 Laws of Personal Change. A complete framework for mental clarity,
-            emotional control, and personal transformation.
-          </p>
-          <a
-            href="https://thekarmacode-48.lovable.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-button"
-          >
-            Explore The Code
-          </a>
-        </div>
-
-        <div className="product-card">
-          <h3>Mobility After 40</h3>
-          <p>
-            Restore your movement, reclaim your strength, and move like you
-            used to. Programs, nutrition, and routines built for real results.
-          </p>
-          <a
-            href="https://mobilityafter40.lovable.app/presales"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-button secondary"
-          >
-            Discover Mobility
-          </a>
-        </div>
+      <section className="about">
+        <h2>About Karma Kartel</h2>
+        <p>
+          Karma Kartel is more than a brand — it’s a movement. 
+          We turn timeless wisdom into cinematic storytelling. 
+          Every short we release carries one mission: to cut through noise and deliver truth. 
+          No gurus. No hype. Just clarity and power.
+        </p>
       </section>
 
-      <footer className="footer">
-        <p>Follow Karma Kartel</p>
-        <div className="social-links">
-          <a
-            href="https://www.instagram.com/karmakartelseries"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://www.tiktok.com/@karmakartelofficial"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TikTok
-          </a>
-          <a
-            href="https://www.youtube.com/@karmakartelofficial"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            YouTube
-          </a>
-        </div>
-        <p className="tagline">
-          Truth is a fire. Walk through it — and rise.
-        </p>
+      <footer>
+        <p>© 2025 Karma Kartel | The Truth Lives Here</p>
       </footer>
     </div>
   );
 }
+
