@@ -16,10 +16,23 @@ export default function App() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.8, ease: "easeOut" }}
       >
-        <img
+        <motion.img
           src="/logo.png"
           alt="Karma Kartel"
           className="logo"
+          animate={{
+            scale: [1, 1.05, 1],
+            filter: [
+              "drop-shadow(0px 0px 20px rgba(255,0,0,0.4))",
+              "drop-shadow(0px 0px 45px rgba(255,0,0,0.75))",
+              "drop-shadow(0px 0px 20px rgba(255,0,0,0.4))",
+            ],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 4,
+            ease: "easeInOut",
+          }}
         />
         <motion.h2
           className="tagline"
