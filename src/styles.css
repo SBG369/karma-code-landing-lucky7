@@ -1,143 +1,61 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+body, html {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #000;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-.app {
-  text-align: center;
-  position: relative;
-  min-height: 100vh;
+  height: 100%;
   overflow: hidden;
+  background: black;
+  font-family: 'Oswald', sans-serif;
 }
 
-/* Hero Section */
-.hero {
+.container {
   position: relative;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, #1a0000 0%, #000 80%);
-  animation: fadeIn 2s ease-in;
+  background-color: #000;
 }
 
-.glow-overlay {
+.flame-bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("https://i.imgur.com/NfYjW9g.gif");
-  background-size: cover;
-  opacity: 0.15;
-  mix-blend-mode: screen;
-  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, #3a0000, #000);
+  background-image: linear-gradient(125deg, #1c0000 0%, #330000 50%, #000 100%);
+  filter: brightness(1.4) contrast(1.2);
+  opacity: 0.85;
+  z-index: 0;
 }
 
-.content {
-  z-index: 1;
-  animation: slideUp 1.5s ease-out;
+.logo-block {
+  text-align: center;
+  z-index: 2;
 }
 
-.title {
-  font-size: 4rem;
-  color: #ff2e00;
-  text-shadow: 0 0 20px #ff2e00, 0 0 40px #ff5200;
-  letter-spacing: 2px;
-  animation: pulse 3s infinite alternate;
+.logo {
+  width: 260px;
+  filter: drop-shadow(0px 0px 25px rgba(255, 0, 0, 0.45));
 }
 
 .tagline {
-  font-size: 1.5rem;
-  margin-top: -10px;
-  color: #ffae42;
-  text-shadow: 0 0 10px #ffae42;
+  color: #f5e4c3;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
-.subtext {
-  margin-top: 20px;
-  color: #ccc;
-  font-size: 1rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5;
-}
-
-/* CTA Buttons */
-.buttons {
-  margin-top: 40px;
-}
-
-.cta {
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  background: linear-gradient(90deg, #ff2e00, #ff7b00);
-  box-shadow: 0 0 15px #ff2e00;
-  transition: all 0.3s ease;
-  margin: 10px;
-}
-
-.cta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px #ff7b00;
-}
-
-.cta.secondary {
-  background: linear-gradient(90deg, #444, #666);
-  box-shadow: 0 0 15px #555;
-}
-
-.cta.secondary:hover {
-  background: linear-gradient(90deg, #ff7b00, #ffae42);
-  box-shadow: 0 0 25px #ffae42;
-}
-
-/* About Section */
-.about {
-  background: #111;
-  padding: 80px 20px;
-  animation: fadeIn 3s ease-in;
-}
-
-.about h2 {
-  color: #ff7b00;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.about p {
-  color: #bbb;
-  max-width: 700px;
-  margin: auto;
-  line-height: 1.6;
-}
-
-/* Footer */
-footer {
-  background: #000;
-  color: #666;
-  padding: 20px 0;
-  font-size: 0.9rem;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes pulse {
-  0% { text-shadow: 0 0 20px #ff2e00, 0 0 40px #ff5200; }
-  100% { text-shadow: 0 0 40px #ff5200, 0 0 80px #ff7b00; }
+.embers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,80,0,0.15) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: color-dodge;
+  opacity: 0.15;
+  z-index: 1;
 }
